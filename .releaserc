@@ -1,10 +1,20 @@
 {
-  "branches": "develop",
+  "branches": "main",
   "repositoryUrl": "https://github.com/davdarras/test-release",
   "debug": "true",
   "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/commit-analyzer", 
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
     [
       "@semantic-release/changelog",
       {
@@ -17,14 +27,15 @@
       {
         "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
       }
-    ],
+    ], 
     [
       "@semantic-release/git",
       {
         "assets": [
           "CHANGELOG.md",
           "pom.xml"
-        ]
+        ],
+        "message": "chore(release): Bumped to version ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],
     [
