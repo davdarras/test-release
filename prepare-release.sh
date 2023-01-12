@@ -14,5 +14,5 @@ mvn versions:set -DnewVersion=$JAR_VERSION
 # These files will be upload to github by @semantic-release/github
 mvn package
 mkdir release && cp target/*.jar release
-
+ 
 printenv
