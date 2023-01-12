@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/davdarras/test-release/compare/v1.0.0...v1.0.1) (2023-01-12)
+
+
+### Bug Fixes
+
+* more spaces in release.sh ([b0af058](https://github.com/davdarras/test-release/commit/b0af05804967ce055f7320c675a2cac2d1f7fd01))
+* spaces in release.sh ([b0af058](https://github.com/davdarras/test-release/commit/b0af05804967ce055f7320c675a2cac2d1f7fd01))
+
 ## 1.0.0 (2023-01-12)
 
 
