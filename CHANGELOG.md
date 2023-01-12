@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/davdarras/test-release/compare/v1.2.0...v1.3.0) (2023-01-12)
+
+
+### Features
+
+* add space to releaserc ([defc2b4](https://github.com/davdarras/test-release/commit/defc2b4e34e7034bd4b4f1e2d2746d7154466b76))
+
 # [1.2.0](https://github.com/davdarras/test-release/compare/v1.1.0...v1.2.0) (2023-01-12)
 
 
