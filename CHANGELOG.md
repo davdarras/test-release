@@ -35,6 +35,17 @@
 
 # Changelog
 
+## [2.0.0](https://github.com/davdarras/test-release/compare/v1.0.1...v2.0.0) (2023-01-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* breakin changes incoming
+
+### Bug Fixes
+
+* breakin changes incoming ([48e524c](https://github.com/davdarras/test-release/commit/48e524cc19a90f2129199df856626e63a80ef436))
+
 ## [1.0.1](https://github.com/davdarras/test-release/compare/v1.0.0...v1.0.1) (2023-01-12)
 
 
