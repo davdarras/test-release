@@ -1,3 +1,38 @@
+# Semantic Versioning Changelog
+
+## [1.3.1](https://github.com/davdarras/test-release/compare/v1.3.0...v1.3.1) (2023-01-12)
+
+
+### Bug Fixes
+
+* no transfert progress bar ([b6e20c6](https://github.com/davdarras/test-release/commit/b6e20c6d65f9ef9e2e0f22c5e2215efd2eed7145))
+
+# [1.3.0](https://github.com/davdarras/test-release/compare/v1.2.0...v1.3.0) (2023-01-12)
+
+
+### Features
+
+* add space to releaserc ([defc2b4](https://github.com/davdarras/test-release/commit/defc2b4e34e7034bd4b4f1e2d2746d7154466b76))
+
+# [1.2.0](https://github.com/davdarras/test-release/compare/v1.1.0...v1.2.0) (2023-01-12)
+
+
+### Features
+
+* delete transfert progress ([e73a6b5](https://github.com/davdarras/test-release/commit/e73a6b51b900ce4df49d4c4822fc800e303816ab))
+
+# [1.1.0](https://github.com/davdarras/test-release/compare/v1.0.1...v1.1.0) (2023-01-12)
+
+
+### Bug Fixes
+
+* change branch in .releaserc ([d9345a5](https://github.com/davdarras/test-release/commit/d9345a5b223a32f1af965c50a1d319fdd39e0067))
+
+
+### Features
+
+* add semanti-release ([d7c2c22](https://github.com/davdarras/test-release/commit/d7c2c22848433b928a5a2c5bf5a74b7dcea48412))
+
 # Changelog
 
 ## [2.0.0](https://github.com/davdarras/test-release/compare/v1.0.1...v2.0.0) (2023-01-12)
