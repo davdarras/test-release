@@ -1,6 +1,6 @@
 {
-  "branches": "feature/ci",
-  "repositoryUrl": "https://github.com/davdarras/mui-project",
+  "branches": "develop",
+  "repositoryUrl": "https://github.com/davdarras/test-release",
   "debug": "true",
   "plugins": [
     "@semantic-release/commit-analyzer",
