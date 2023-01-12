@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.3.1](https://github.com/davdarras/test-release/compare/v1.3.0...v1.3.1) (2023-01-12)
+
+
+### Bug Fixes
+
+* no transfert progress bar ([b6e20c6](https://github.com/davdarras/test-release/commit/b6e20c6d65f9ef9e2e0f22c5e2215efd2eed7145))
+
 # [1.3.0](https://github.com/davdarras/test-release/compare/v1.2.0...v1.3.0) (2023-01-12)
 
 
