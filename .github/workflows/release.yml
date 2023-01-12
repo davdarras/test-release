@@ -1,30 +1,14 @@
-name: Java Semantic Release Example
-
+name: release
 on:
   push:
     branches:
       - main
-
 jobs:
-  release:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+  release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
+      - uses: google-github-actions/release-please-action@v3
         with:
-          distribution: "temurin"
-          java-version: "17"
-      - name: setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: setup semantic-release
-        run: npm install -g conventional-changelog-conventionalcommits semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator
-      - name: release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: chmod +x ./prepare-release.sh && npx semantic-release
+          release-type: maven
+          default-branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
