@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/davdarras/test-release/compare/v1.1.0...v1.2.0) (2023-01-12)
+
+
+### Features
+
+* delete transfert progress ([e73a6b5](https://github.com/davdarras/test-release/commit/e73a6b51b900ce4df49d4c4822fc800e303816ab))
+
 # [1.1.0](https://github.com/davdarras/test-release/compare/v1.0.1...v1.1.0) (2023-01-12)
 
 
