@@ -11,3 +11,4 @@ jobs:
         with:
           release-type: maven
           default-branch: feature/ci
+          token: ${{ secrets.GITHUB_TOKEN }}
