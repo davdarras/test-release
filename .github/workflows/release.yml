@@ -11,4 +11,4 @@ jobs:
         with:
           release-type: maven
           default-branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}     
+          token: ${{ secrets.GITHUB_TOKEN }}
