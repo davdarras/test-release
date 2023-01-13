@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: v2-develop
+          ref: v2-main
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -68,7 +68,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: v2-develop
+          ref: v2-main
 
       - name: Download PE jar
         uses: actions/download-artifact@v3
