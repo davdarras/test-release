@@ -65,7 +65,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ GITHUB_REF }}
+          ref: ${{ vars.GITHUB_REF }}
 
       - name: Download PE jar
         uses: actions/download-artifact@v3
