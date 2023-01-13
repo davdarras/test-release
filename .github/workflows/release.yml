@@ -10,5 +10,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: maven
-          default-branch: main
           token: ${{ secrets.GITHUB_TOKEN }}
