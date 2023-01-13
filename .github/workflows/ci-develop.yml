@@ -64,6 +64,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ GITHUB_REF }}
 
       - name: Download PE jar
         uses: actions/download-artifact@v3
