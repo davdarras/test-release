@@ -22,9 +22,6 @@ jobs:
           node-version: 18
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: echo SHA commit 1
-        run: echo ${GITHUB_REF##*/}
       - name: setup semantic-release
         run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator @saithodev/semantic-release-backmerge conventional-changelog-conventionalcommits
       - name: release
