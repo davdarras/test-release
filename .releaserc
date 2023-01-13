@@ -49,19 +49,10 @@
           "CHANGELOG.md",
           "pom.xml"
         ],
-        "message": "chore(release): Bumped to version ${nextRelease.version}\n\n${nextRelease.notes}"
+        "message": "chore(release): Bumped to version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          {
-            "path": "release/**"
-          }
-        ]
-      }
-    ],
+    "@semantic-release/github",
     [
       "@saithodev/semantic-release-backmerge",
       {
@@ -70,14 +61,6 @@
             "from": "v2-main",
             "to": "v2-develop"
           }
-        ],
-        "plugins": [
-          [
-            "@semantic-release/exec",
-            {
-              "successCmd": "echo 'Version in master is ${nextRelease.version}' > test.txt && git add test.txt"
-            }
-          ]
         ]
       }
     ]
