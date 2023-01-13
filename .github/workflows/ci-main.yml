@@ -75,7 +75,7 @@ jobs:
       - name: Publish to Docker Hub
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: davdarras/test-release
+          name: ddarras/test-release
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           default_branch: v2-main
