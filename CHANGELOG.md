@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [3.0.1-rc.3](https://github.com/davdarras/test-release/compare/3.0.1-rc.2...3.0.1-rc.3) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again6 ([03ca8cd](https://github.com/davdarras/test-release/commit/03ca8cd5a38c97f2e5a317ff31b6700e0f309776))
+* test again7 ([2a01dc4](https://github.com/davdarras/test-release/commit/2a01dc4dae613606bea30e6021c14977867588a3))
+
 ## [3.0.1-rc.2](https://github.com/davdarras/test-release/compare/3.0.1-rc.1...3.0.1-rc.2) (2023-01-13)
 
 
