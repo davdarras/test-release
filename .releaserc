@@ -1,10 +1,17 @@
 {
-  "branches": "main",
+  "branches": [
+    "v2-main",
+    {
+      "name": "v2-develop",
+      "prerelease": "rc"
+    }
+  ],
+  "tagFormat": "${version}",
   "repositoryUrl": "https://github.com/davdarras/test-release",
   "debug": "true",
   "plugins": [
     [
-      "@semantic-release/commit-analyzer", 
+      "@semantic-release/commit-analyzer",
       {
         "preset": "conventionalcommits"
       }
@@ -12,7 +19,14 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "conventionalcommits"
+        "preset": "conventionalcommits",
+        "writerOpts": {
+          "groupBy": "type",
+          "commitGroupsSort": "title",
+          "commitsSort": "header"
+        },
+        "linkCompare": true,
+        "linkReferences": true
       }
     ],
     [
@@ -25,11 +39,11 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+        "prepareCmd": "mvn versions:set -DnewVersion=${nextRelease.version} --no-transfer-progress"
       }
-    ], 
+    ],
     [
-      "@semantic-release/git", 
+      "@semantic-release/git",
       {
         "assets": [
           "CHANGELOG.md",
@@ -43,10 +57,29 @@
       {
         "assets": [
           {
-            "path": "release/**"  
+            "path": "release/**"
           }
         ]
-      } 
+      }
+    ],
+    [
+      "@saithodev/semantic-release-backmerge",
+      {
+        "branches": [
+          {
+            "from": "v2-main",
+            "to": "v2-develop"
+          }
+        ],
+        "plugins": [
+          [
+            "@semantic-release/exec",
+            {
+              "successCmd": "echo 'Version in master is ${nextRelease.version}' > test.txt && git add test.txt"
+            }
+          ]
+        ]
+      }
     ]
   ]
 }

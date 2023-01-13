@@ -1,5 +1,68 @@
 # Semantic Versioning Changelog
 
+## [3.0.1-rc.8](https://github.com/davdarras/test-release/compare/3.0.1-rc.7...3.0.1-rc.8) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again10 ([37e10be](https://github.com/davdarras/test-release/commit/37e10be78182dc47c48c44e07e91c34cad64303f))
+* test again10 ([42daff1](https://github.com/davdarras/test-release/commit/42daff17eb2574c1dddeff2fa4e60d38350c9c63))
+
+## [3.0.1-rc.7](https://github.com/davdarras/test-release/compare/3.0.1-rc.6...3.0.1-rc.7) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again9 ([a0deadc](https://github.com/davdarras/test-release/commit/a0deadc73283957e9a887c03ceadc37db8390140))
+
+## [3.0.1-rc.6](https://github.com/davdarras/test-release/compare/3.0.1-rc.5...3.0.1-rc.6) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again9 ([7ed2477](https://github.com/davdarras/test-release/commit/7ed2477345df8e42f1419c6855f357628adb493d))
+
+## [3.0.1-rc.5](https://github.com/davdarras/test-release/compare/3.0.1-rc.4...3.0.1-rc.5) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again8 ([84c710d](https://github.com/davdarras/test-release/commit/84c710d8938d6b76b0f897f76be468a0672b4340))
+
+## [3.0.1-rc.4](https://github.com/davdarras/test-release/compare/3.0.1-rc.3...3.0.1-rc.4) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again7 ([242f2da](https://github.com/davdarras/test-release/commit/242f2daf0ba8d27aba7f04ee390176e67f3e33c0))
+
+## [3.0.1-rc.3](https://github.com/davdarras/test-release/compare/3.0.1-rc.2...3.0.1-rc.3) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again6 ([03ca8cd](https://github.com/davdarras/test-release/commit/03ca8cd5a38c97f2e5a317ff31b6700e0f309776))
+* test again7 ([2a01dc4](https://github.com/davdarras/test-release/commit/2a01dc4dae613606bea30e6021c14977867588a3))
+
+## [3.0.1-rc.2](https://github.com/davdarras/test-release/compare/3.0.1-rc.1...3.0.1-rc.2) (2023-01-13)
+
+
+### Bug Fixes
+
+* test again5 ([e48dc15](https://github.com/davdarras/test-release/commit/e48dc1557d52f8ec5ea635452cddb20fda25ecf3))
+
+## [3.0.1-rc.1](https://github.com/davdarras/test-release/compare/v3.0.0...3.0.1-rc.1) (2023-01-13)
+
+
+### Bug Fixes
+
+* changes 12 ([8b6f52e](https://github.com/davdarras/test-release/commit/8b6f52ef0269ae60b76d9a1ff751c9e958b85586))
+* changes 12 ([#31](https://github.com/davdarras/test-release/issues/31)) ([98e7bf2](https://github.com/davdarras/test-release/commit/98e7bf23c074d3d4f4d845c44799ba646c01a60d))
+* changes 13 ([674841f](https://github.com/davdarras/test-release/commit/674841ffcf079eafad323e6a0f9778c884416195))
+* changes 14 ([0ce7d09](https://github.com/davdarras/test-release/commit/0ce7d099fd81cfc2120e7af9f133e3d86cdd6587))
+* changes 15 ([e7d80bf](https://github.com/davdarras/test-release/commit/e7d80bfbf4a9f2398efde80285cf43c3cd7150f6))
+* changes 16 ([c5ba763](https://github.com/davdarras/test-release/commit/c5ba763b523f42114d23b82787567d545223a4b2))
+
 ## [3.0.0](https://github.com/davdarras/test-release/compare/v2.1.4...v3.0.0) (2023-01-13)
 
 
