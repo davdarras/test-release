@@ -22,6 +22,9 @@ jobs:
           node-version: 18
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: echo SHA commit 1
+        run: echo "${{ GITHUB_REF }}"
       - name: setup semantic-release
         run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator @saithodev/semantic-release-backmerge conventional-changelog-conventionalcommits
       - name: release
@@ -36,6 +39,8 @@ jobs:
       release-version: ${{ steps.version-step.outputs.pe-version }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ vars.GITHUB_REF }}
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -45,7 +50,7 @@ jobs:
 
       - name: Get current version
         id: version-step
-        run: echo "::set-output name=pe-version::$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)"
+        run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
 
       - name: Print PE Version
         run: echo ${{ steps.version-step.outputs.pe-version }}
@@ -63,10 +68,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ vars.GITHUB_REF }}
-
       - name: Download PE jar
         uses: actions/download-artifact@v3
         with:
