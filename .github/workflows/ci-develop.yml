@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: setup semantic-release
-        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator @saithodev/semantic-release-backmerge @conventional-changelog-conventionalcommits
+        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator @saithodev/semantic-release-backmerge conventional-changelog-conventionalcommits
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
