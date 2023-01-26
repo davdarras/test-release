@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [3.1.0-rc.1](https://github.com/davdarras/test-release/compare/3.0.3-rc.1...3.1.0-rc.1) (2023-01-26)
+
+
+### Features
+
+* Add texte to test.txt ([694227e](https://github.com/davdarras/test-release/commit/694227eeb19536bd67fa9bfc309e63bba7acbe20))
+
 ## [3.0.3-rc.1](https://github.com/davdarras/test-release/compare/3.0.2...3.0.3-rc.1) (2023-01-13)
 
 
