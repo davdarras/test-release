@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [3.1.0-rc.2](https://github.com/davdarras/test-release/compare/3.1.0-rc.1...3.1.0-rc.2) (2023-01-26)
+
+
+### Features
+
+* Add random text to test.txt ([0bdbb1c](https://github.com/davdarras/test-release/commit/0bdbb1cb4185b3147f265643038e4b3afe9b935e))
+
 ## [3.1.0-rc.1](https://github.com/davdarras/test-release/compare/3.0.3-rc.1...3.1.0-rc.1) (2023-01-26)
 
 
