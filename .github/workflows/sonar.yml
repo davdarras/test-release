@@ -26,7 +26,7 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Build and analyze
-        run: mvn sonar:sonar -Dsonar.organization=davdarras -Dsonar.projectKey=davdarras_test-release -Dsonar.host.url=https://sonarcloud.io -Dsonar.sources=src -Dsonar.java.binaries=target --no-transfer-progress
+        run: mvn sonar:sonar --no-transfer-progress
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
