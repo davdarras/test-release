@@ -56,7 +56,7 @@
     [
       "@saithodev/semantic-release-backmerge",
       {
-        "branches": [
+        "backmergeBranches": [
           {
             "from": "v2-main",
             "to": "v2-develop"
