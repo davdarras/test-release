@@ -17,7 +17,6 @@
 		<sonar.organization>davdarras</sonar.organization>
 		<sonar.projectKey>davdarras_test-release</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>a925e09e6bad1954016faf2c4600805bc30bf3da</sonar.login>
 	</properties>
 	<dependencies>
 		<dependency>
