@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-02-22)
+
+
+### Features
+
+* ok ([1f9668b](https://github.com/davdarras/test-release/commit/1f9668bd755319c7300eccdf46613650557bfe09))
+
 ## [3.1.0](https://github.com/davdarras/test-release/compare/3.0.2...3.1.0) (2023-01-26)
 
 
