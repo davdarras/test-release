@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-04-29)
+
+
+### Features
+
+* new config ([a28e9ed](https://github.com/davdarras/test-release/commit/a28e9edd13c413941318580039e5bf74f5f1fce9))
+* ok ([dfd0370](https://github.com/davdarras/test-release/commit/dfd037098403b2f579858bf4fe4d27309b6a4d03))
+* test2 ([d7a4b7c](https://github.com/davdarras/test-release/commit/d7a4b7cbd524190b72b0112f74c2acfb834662fa))
+
 ## [3.2.0-rc.2](https://github.com/davdarras/test-release/compare/3.2.0-rc.1...3.2.0-rc.2) (2023-02-22)
 
 
