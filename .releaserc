@@ -3,8 +3,9 @@
     "v2-main",
     {
       "name": "v2-develop",
-      "prerelease": "rc"
-    }
+      "prerelease": "rc",
+      "channel": "next"
+    },
   ],
   "tagFormat": "${version}",
   "repositoryUrl": "https://github.com/davdarras/test-release",
