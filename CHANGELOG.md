@@ -3,6 +3,21 @@
 ## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-04-29)
 
 
+### Bug Fixes
+
+* typo ([58bd27b](https://github.com/davdarras/test-release/commit/58bd27bbceb8fb3243d2363670b4d6078c078fd6))
+
+
+### Features
+
+* new config ([a28e9ed](https://github.com/davdarras/test-release/commit/a28e9edd13c413941318580039e5bf74f5f1fce9))
+* ok ([dfd0370](https://github.com/davdarras/test-release/commit/dfd037098403b2f579858bf4fe4d27309b6a4d03))
+* test ([45031fd](https://github.com/davdarras/test-release/commit/45031fd90cd6ade0570848db9387098c24311fe2))
+* test2 ([d7a4b7c](https://github.com/davdarras/test-release/commit/d7a4b7cbd524190b72b0112f74c2acfb834662fa))
+
+## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-04-29)
+
+
 ### Features
 
 * new config ([a28e9ed](https://github.com/davdarras/test-release/commit/a28e9edd13c413941318580039e5bf74f5f1fce9))
