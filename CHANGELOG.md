@@ -7,6 +7,13 @@
 
 * release-master.yml ([6066a8a](https://github.com/davdarras/test-release/commit/6066a8abbfe8871cb361df208a280db7b50bca05))
 
+## [1.0.1](https://github.com/davdarras/test-release/compare/1.0.0...1.0.1) (2023-04-29)
+
+
+### Bug Fixes
+
+* release-master.yml ([6066a8a](https://github.com/davdarras/test-release/commit/6066a8abbfe8871cb361df208a280db7b50bca05))
+
 ## [1.0.0](https://github.com/davdarras/test-release/compare/...1.0.0) (2023-04-29)
 
 
