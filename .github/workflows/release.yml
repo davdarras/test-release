@@ -1,12 +1,13 @@
-name: V2 Build Docker
+name: Build Release
 
 on:
   push:
     branches:
       - v2-develop
+      - v2-main
 
 jobs:
-  release-rc:
+  release:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +18,7 @@ jobs:
           distribution: "temurin"
           java-version: "17"
       - name: setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 18
         env:
@@ -29,15 +30,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
 
-  build:
-    needs: release-rc
+  build-release:
+    needs: release
     runs-on: ubuntu-latest
     outputs:
       release-version: ${{ steps.version-step.outputs.pe-version }}
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
+        id: extract_branch
+
       - uses: actions/checkout@v3
         with:
-          ref: v2-develop
+          ref: ${{ steps.extract_branch.outputs.branch }}
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -45,7 +51,7 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
-      - name: Get current version
+      - name: Get release version
         id: version-step
         run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
 
@@ -62,12 +68,10 @@ jobs:
           path: target/*.jar
 
   docker:
-    needs: build
+    needs: build-release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: v2-develop
       - name: Download PE jar
         uses: actions/download-artifact@v3
         with:
@@ -80,5 +84,4 @@ jobs:
           name: ddarras/test-release
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          default_branch: v2-develop
-          tags: latest
+          tags: "latest,${{ needs.build-release.outputs.release-version }}"
