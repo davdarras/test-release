@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [3.2.0-rc.2](https://github.com/davdarras/test-release/compare/3.2.0-rc.1...3.2.0-rc.2) (2023-04-29)
+
+
+### Features
+
+* plop ([8a27452](https://github.com/davdarras/test-release/commit/8a2745294cb105bbcfadde30eeff49b2100c77f8))
+
 ## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-04-29)
 
 
