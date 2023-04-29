@@ -1,5 +1,25 @@
 # Semantic Versioning Changelog
 
+## [3.2.0-rc.1](https://github.com/davdarras/test-release/compare/3.1.0...3.2.0-rc.1) (2023-04-29)
+
+
+### Bug Fixes
+
+* modify test ([6041d91](https://github.com/davdarras/test-release/commit/6041d91ea424736990ecc60623366c3726796f5b))
+* typo ([f814295](https://github.com/davdarras/test-release/commit/f814295c0155a4b5555a9d8d8a65fe966db25692))
+
+
+### Features
+
+* new config ([efc1e80](https://github.com/davdarras/test-release/commit/efc1e801c71173bf7e1d5407fcaf4a428185ab74))
+* ok ([2924caf](https://github.com/davdarras/test-release/commit/2924cafd04796f2031cc4d44e10fe6227c4248f1))
+* plop ([7c4aa2c](https://github.com/davdarras/test-release/commit/7c4aa2c3a168662e16c426110cdc9e63e3224fb9))
+* plop ([6caaedc](https://github.com/davdarras/test-release/commit/6caaedc759712924b6fd450314d18ac62b2fd5b4))
+* plop ([8729998](https://github.com/davdarras/test-release/commit/87299988e23ff347a86f9de4e948a4978529a2fd))
+* test ([e7c6f48](https://github.com/davdarras/test-release/commit/e7c6f48130218c94917ce87c9dab3b356ad9e487))
+* test ([400ac9e](https://github.com/davdarras/test-release/commit/400ac9e16ae8518c047156864cde19b9e54e475b))
+* test2 ([8c6225c](https://github.com/davdarras/test-release/commit/8c6225c0c4cb02cda17d44c76024c92058048a0d))
+
 ## [3.2.0-rc.3](https://github.com/davdarras/test-release/compare/3.2.0-rc.2...3.2.0-rc.3) (2023-04-29)
 
 
