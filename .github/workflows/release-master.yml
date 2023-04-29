@@ -3,12 +3,10 @@ name: Build Release
 on:
   push:
     branches:
-      - v2-develop
       - v2-main
 
 jobs:
   release:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
