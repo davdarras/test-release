@@ -18,3 +18,4 @@ jobs:
           release-type: maven
           package-name: release-please-action
           include-v-in-tag: false
+          default-branch: v2-main
