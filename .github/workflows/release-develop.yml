@@ -6,7 +6,27 @@ on:
       - v2-develop
 
 jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      release-version: ${{ steps.version.outputs.pe-version }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Get version
+      id: version
+      run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
+
+    - name: Print version
+      run: echo ${{ steps.version.outputs.pe-version }}
+
+    - if: ${{ steps.checkTag.outputs.exists == 'true' }}
+      name: "Skip release"
+      run: echo "Nothing to tag/release, the tag ${{ steps.version.outputs.pe-version }} already exists"
+
   release:
+    needs: check-version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,8 +34,7 @@ jobs:
           ref: ${{ github.ref }}
       - uses: softprops/action-gh-release@v1
         with:
-          name: Release plop
-          tag_name: 3.4.5
+          tag_name: ${{ needs.get-version.outputs.release-version }}
           target_commitish: ${{ github.head_ref || github.ref }}
           generate_release_notes: true
         env:
