@@ -35,7 +35,7 @@ jobs:
   release: 
     needs: create-tag
     runs-on: ubuntu-latest
-    if: ${{ needs.create-tag.outputs.tag-already-exists == "false" }}
+    if: ${{ ! needs.create-tag.outputs.tag-already-exists }}
     steps:
     - name: Checkout
       uses: actions/checkout@v3
