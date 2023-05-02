@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.2-rc.1](https://github.com/davdarras/test-release/compare/1.0.1...1.0.2-rc.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* add text to test ([3d21648](https://github.com/davdarras/test-release/commit/3d216486018891098a28b54268864827019bd9fb))
+
 ## [1.0.1](https://github.com/davdarras/test-release/compare/1.0.0...1.0.1) (2023-04-29)
 
 
