@@ -33,8 +33,6 @@ jobs:
         with: 
           tag: "${{ needs.get-version.outputs.release-version }}"
 
-      - run: echo ${{ steps.checkTag.outputs.exists }}
-
       - uses: rickstaa/action-create-tag@v1
         id: "createTag"
         if: ${{ steps.checkTag.outputs.exists == 'false' }}
@@ -48,7 +46,6 @@ jobs:
   release: 
     needs: create-tag
     runs-on: ubuntu-latest
-    if: ${{ needs.create-tag.outputs.tag-already-exists == 'false'}}
     steps:
     - name: Checkout
       uses: actions/checkout@v3
