@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [2.1.0](https://github.com/davdarras/test-release/compare/2.0.0...2.1.0) (2023-05-02)
+
+
+### Features
+
+* test major change ([8c41093](https://github.com/davdarras/test-release/commit/8c41093de3fe99759515f1fd6187520447cceee7))
+
+
+### Bug Fixes
+
+* test2 ([74e0086](https://github.com/davdarras/test-release/commit/74e00861655cf5b5bf202fc4a72d4956d890af51))
+
 ## [2.0.0](https://github.com/davdarras/test-release/compare/v1.0.0...2.0.0) (2023-05-02)
 
 
