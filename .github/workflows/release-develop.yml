@@ -33,20 +33,11 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: conventional changelog action
-        id: changelog
-        # https://github.com/TriPSs/conventional-changelog-action
-        uses: TriPSs/conventional-changelog-action@latest
-        with:
-          # you can also create separate token to trace action
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
       - uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ needs.check-version.outputs.release-version }}
-          target_commitish: ${{ github.head_ref || github.ref }}
-          name: ${{ steps.changelog.outputs.tag }}
-          body: ${{steps.changelog.outputs.clean_changelog}}          
+          target_commitish: ${{ github.head_ref || github.ref }}  
+          generate_release_notes: true   
           prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
