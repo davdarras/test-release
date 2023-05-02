@@ -1,4 +1,13 @@
-# 0.1.0 (2023-05-02)
+# [0.2.0](https://github.com/davdarras/test-release/compare/v0.1.0...v0.2.0) (2023-05-02)
+
+
+### Features
+
+* 2.1.37 ([da5ba2c](https://github.com/davdarras/test-release/commit/da5ba2cbc48ee34280ed60f8a02fdefb39fcef88))
+
+
+
+# [0.1.0](https://github.com/davdarras/test-release/compare/278f3ce517d96f234d51e4774a6346c907ae0ac6...v0.1.0) (2023-05-02)
 
 
 ### Bug Fixes
