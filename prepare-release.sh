@@ -14,5 +14,5 @@ mvn versions:set -DnewVersion=$JAR_VERSION  --no-transfer-progress
 # These files will be upload to github by @semantic-release/github
 mvn package --no-transfer-progress
 mkdir release && cp target/*.jar release
-     
+echo plop
 printenv
