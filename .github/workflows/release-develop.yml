@@ -19,4 +19,5 @@ jobs:
           package-name: release-please-action
           include-v-in-tag: false
           default-branch: v2-develop
+          prerelease: true
 
