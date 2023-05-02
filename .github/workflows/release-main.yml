@@ -1,9 +1,9 @@
-name: Build release candidate
+name: Build release
 
 on:
   push:
     branches: 
-      - v2-develop
+      - v2-main
 
 jobs:
   check-version:
@@ -16,7 +16,7 @@ jobs:
 
     - name: Get version
       id: version
-      run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)-rc" >> $GITHUB_OUTPUT
+      run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
 
     - name: Print version
       run: echo ${{ steps.version.outputs.pe-version }}
@@ -37,6 +37,5 @@ jobs:
           tag_name: ${{ needs.check-version.outputs.release-version }}
           target_commitish: ${{ github.head_ref || github.ref }}
           generate_release_notes: true
-          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
