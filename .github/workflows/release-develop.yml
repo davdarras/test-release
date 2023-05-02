@@ -37,11 +37,11 @@ jobs:
 
       - uses: rickstaa/action-create-tag@v1
         id: "createTag"
-        if: ${{ steps.checkTag.outputs.exists }} == "false"
+        if: ${{ steps.checkTag.outputs.exists == 'false' }}
         with:
           tag: "${{ needs.get-version.outputs.release-version }}"
 
-      - if: ${{ steps.checkTag.outputs.exists }} == "true"
+      - if: ${{ steps.checkTag.outputs.exists == 'true' }}
         name: "Nothing to tag/release"
         run: echo "Nothing to tag/release, the tag ${{ needs.get-version.outputs.release-version }} already exists"
 
