@@ -34,7 +34,7 @@ jobs:
           ref: ${{ github.ref }}
       - uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ needs.get-version.outputs.release-version }}
+          tag_name: ${{ needs.check-version.outputs.release-version }}
           target_commitish: ${{ github.head_ref || github.ref }}
           generate_release_notes: true
         env:
