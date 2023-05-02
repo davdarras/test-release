@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-      
+
     - name: Get version
       id: version
       run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
@@ -22,7 +22,7 @@ jobs:
     needs: get-version
     runs-on: ubuntu-latest
     outputs: 
-      tag-already-exists: ${{ steps.create-tag.outputs.tag_exists }}
+      tag-already-exists: ${{ steps.createTag.outputs.tag_exists }}
     steps:
       - uses: actions/checkout@v3
       - uses: rickstaa/action-create-tag@v1
@@ -33,7 +33,7 @@ jobs:
 
       # Print result using the action output.
       - run: |
-          echo "Tag already present: ${{ steps.create-tag.outputs.tag_exists }}"
+          echo "Tag already present: ${{ steps.createTag.outputs.tag_exists }}"
 
   release: 
     needs: create-tag
