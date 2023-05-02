@@ -66,6 +66,5 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ needs.get-version.outputs.release-version }}
-        target_commitish: ${{ github.head_ref || github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
