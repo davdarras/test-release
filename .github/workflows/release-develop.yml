@@ -34,10 +34,10 @@ jobs:
           tag: "${{ needs.get-version.outputs.release-version }}"
 
       - run: echo ${{ steps.checkTag.outputs.exists }}
-      
+
       - uses: rickstaa/action-create-tag@v1
         id: "createTag"
-        if: ${{ ! steps.checkTag.outputs.exists }}
+        if: ${{ steps.checkTag.outputs.exists == false }}
         with:
           tag: "${{ needs.get-version.outputs.release-version }}"
 
