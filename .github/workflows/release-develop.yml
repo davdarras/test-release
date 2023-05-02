@@ -42,7 +42,6 @@ jobs:
           tag: "${{ needs.get-version.outputs.release-version }}"
 
       - if: ${{ steps.checkTag.outputs.exists == 'true' }}
-        name: "Nothing to tag/release"
         run: echo "Nothing to tag/release, the tag ${{ needs.get-version.outputs.release-version }} already exists"
 
   release: 
