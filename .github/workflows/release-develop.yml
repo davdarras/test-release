@@ -8,6 +8,9 @@ jobs:
     outputs:
       release-version: ${{ steps.version.outputs.pe-version }}
     steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
     - name: Get version
       id: version
       run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
