@@ -63,9 +63,9 @@ jobs:
     - name: Test
       run: cat Release.txt
 
-    - name: Release
-      uses: softprops/action-gh-release@v1
+    - name: 🛎️ Create release
+      uses: ncipollo/release-action@v1
       with:
-        tag_name: ${{ needs.get-version.outputs.release-version }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ needs.get-version.outputs.release-version }}
+        draft: true
