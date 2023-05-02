@@ -6,66 +6,17 @@ on:
       - v2-develop
 
 jobs:
-  get-version:
+  release:
     runs-on: ubuntu-latest
-    outputs:
-      release-version: ${{ steps.version.outputs.pe-version }}
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Get version
-      id: version
-      run: echo "pe-version=$(mvn -f pom.xml help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
-
-    - name: Print version
-      run: echo ${{ steps.version.outputs.pe-version }}
-
-  create-tag:
-    needs: get-version
-    runs-on: ubuntu-latest
-    outputs: 
-      tag-already-exists: ${{ steps.checkTag.outputs.exists }}
     steps:
       - uses: actions/checkout@v3
-      - uses: mukunku/tag-exists-action@v1.2.0
-        id: checkTag
-        with: 
-          tag: "${{ needs.get-version.outputs.release-version }}"
-
-      - uses: rickstaa/action-create-tag@v1
-        id: "createTag"
-        if: ${{ steps.checkTag.outputs.exists == 'false' }}
         with:
-          tag: "${{ needs.get-version.outputs.release-version }}"
-
-      - if: ${{ steps.checkTag.outputs.exists == 'true' }}
-        name: "Skip release"
-        run: echo "Nothing to tag/release, the tag ${{ needs.get-version.outputs.release-version }} already exists"
-
-  release: 
-    needs: create-tag
-    runs-on: ubuntu-latest
-    if: ${{ needs.create-tag.outputs.tag-already-exists == 'false' }}
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        ref: v2-develop
-        fetch-depth: '0'
-        
-    - name: Build
-      run: echo ${{ github.sha }} > Release.txt
-
-    - name: Build
-      run: echo ${{ github.ref }}
-
-    - name: Test
-      run: cat Release.txt
-
-    - name: 🛎️ Create release
-      uses: ncipollo/release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{ needs.get-version.outputs.release-version }}
-        draft: true
+          ref: ${{ github.ref }}
+      - uses: softprops/action-gh-release@v1
+        with:
+          name: Release plop
+          tag_name: 3.4.5
+          target_commitish: ${{ github.head_ref || github.ref }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
