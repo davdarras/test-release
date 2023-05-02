@@ -51,10 +51,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-          ref: ${{ github.ref }}
-          
+          ref: v2-develop
+
     - name: Build
       run: echo ${{ github.sha }} > Release.txt
+
+    - name: Build
+      run: echo ${{ github.ref }}
 
     - name: Test
       run: cat Release.txt
