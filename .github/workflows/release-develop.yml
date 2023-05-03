@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release-version: ${{ steps.version.outputs.pe-version }}
+      tag-already-exists: ${{ steps.checkTag.outputs.exists }}
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -28,6 +29,7 @@ jobs:
   release:
     needs: check-version
     runs-on: ubuntu-latest
+    if: ${{ needs.check-version.outputs.tag-already-exists == 'false' }}
     steps:
       - uses: actions/checkout@v3
         with:
