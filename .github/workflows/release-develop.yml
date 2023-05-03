@@ -41,3 +41,9 @@ jobs:
           prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+  post-release:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ needs.check-version.outputs.release-version }}
