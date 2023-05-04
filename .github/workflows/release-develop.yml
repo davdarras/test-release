@@ -42,7 +42,7 @@ jobs:
 
       - name: Get previous tag
         id: previousTag
-        run: echo "previousTag=$(git --no-pager tag --sort=creatordate --merged ${{ github.ref_name }} | grep "-rc" | tail -2 | head -1)" >> $GITHUB_OUTPUT
+        run: echo "previousTag=$(git --no-pager tag --sort=creatordate --merged ${{ github.ref_name }} | tail -2 | head -1)" >> $GITHUB_OUTPUT
     
       - name: Print previous tag
         run: echo ${{ steps.previousTag.outputs.previousTag }}
