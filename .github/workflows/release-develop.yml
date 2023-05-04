@@ -40,12 +40,30 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
+      - name: Get previous tag
+        id: previousTag
+        run: |
+          name=$(git --no-pager tag --sort=creatordate --merged ${{ github.ref_name }} | grep "-rc" | tail -2 | head -1)
+          echo "previousTag: $name"
+          echo "previousTag=$name" >> $GITHUB_ENV
+
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          writeToFile: false
+          toTag: "${{ needs.check-version.outputs.release-version }}"
+          fromTag: "${{ steps.previousTag.outputs.previousTag}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ needs.check-version.outputs.release-version }}
           target_commitish: ${{ github.head_ref || github.ref }}  
-          generate_release_notes: true   
-          prerelease: true
+          name: ${{ needs.check-version.outputs.release-version }}
+          body: ${{steps.changelog.outputs.changes}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   post-release:
