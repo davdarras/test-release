@@ -56,7 +56,6 @@ jobs:
         id: changelog
         uses: requarks/changelog-action@v1
         with:
-          toTag: ${{ needs.check-version.outputs.release-version }}
           fromTag: ${{ steps.previousTag.outputs.previousTag}}
           token: ${{ secrets.GITHUB_TOKEN }}
           writeToFile: false
